@@ -5,4 +5,5 @@ public class Program {
         Deck deck = new Deck();
         System.out.println(deck.getSize());
     }
+    //shuffle here?
 }
