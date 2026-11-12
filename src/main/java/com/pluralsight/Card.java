@@ -37,11 +37,12 @@ public class Card {
         // TODO: this is your job (Blackjack, p. 95).
 //        suit.ignore
 ////         card.flip
+
         if (faceUp) {
-            if (suit.equalsIgnoreCase("k") || suit.equalsIgnoreCase("q") || suit.equalsIgnoreCase("j")) {
+            if (value.equalsIgnoreCase("K") || value.equalsIgnoreCase("K") || value.equalsIgnoreCase("J")) {
                 return 10;
             }
-            if (suit.equalsIgnoreCase("Ace")) {
+            if (value.equalsIgnoreCase("A")) {
                 return 11;
             }
             //this is what I think is looking at numeric cards and returning its value as an integer
@@ -54,28 +55,15 @@ public class Card {
 //         check suit
 //         check value
 //         card.flip
-
-        switch (suit.toLowerCase()) {
-            case "k", "q", "j" -> {
-                // Do some logic here if needed
-                return 10;
-            }
-            case "Ace" -> {
-                return 11;
-            }
-            default -> {
-                return 0; // This works because the method returns an int
-            }
-            // Until you finish it, every card is worth 0.
+        // Until you finish it, every card is worth 0.
 //        return 0;
-        }
 
         //flip card again so it's face down once the point value is returned so that it can be given back to the deck?
 //        if (!faceUp) {
 //            return 0;
 //        }
 //        faceUp = !faceUp;
-
+        return 0;
     }
 
     public boolean isFaceUp() {
