@@ -8,9 +8,9 @@ public class Hand {
     public Hand() {
         cards = new ArrayList<>();
     }
-    //put players as hand1 and hand2 here?
-    Hand hand1= new Hand() ;
-    Hand hand2= new Hand() ;
+//    //put players as hand1 and hand2 here? no bc we need the hands in the app to work with them and run the app with them to deal them cards and anything else
+//    Hand hand1= new Hand() ;
+//    Hand hand2= new Hand() ;
 
     // A Card is dealt to the Hand and the Hand is responsible
     // to store the card
