@@ -44,6 +44,7 @@ public class Card {
             if(suit.equalsIgnoreCase("Ace")){
                 return 11;
             }
+            //this is what I think is looking at numeric cards and returning its value as an integer
             if (faceUp){
                 return Integer.parseInt(value);
             }
