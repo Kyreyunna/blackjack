@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.util.Objects;
+
 public class Card {
     private String suit;
     private String value;
@@ -33,13 +35,35 @@ public class Card {
 
     public int getPointValue() {
         // TODO: this is your job (Blackjack, p. 95).
-//         card.flip
+//        suit.ignore
+////         card.flip
+//        if (faceUp){
+//            if (suit.equalsIgnoreCase("k")||suit.equalsIgnoreCase("k")) {
+//                return 10;
+//            }
+//            if (faceUp){
+//                return Integer.parseInt(value);
+//            }
+//        }else {
+//            return 0;
+//        }
 //         check suit
 //         check value
 //         card.flip
-
+        switch (suit.toLowerCase()) {
+            case "north" -> {
+                // Do some logic here if needed
+                return 1;
+            }
+            case "south" -> {
+                return 2;
+            }
+            default -> {
+                return 10; // This works because the method returns an int
+            }
+        }
         // Until you finish it, every card is worth 0.
-        return 0;
+//        return 0;
     }
 
     public boolean isFaceUp() {
