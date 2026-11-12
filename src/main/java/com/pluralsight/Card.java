@@ -37,29 +37,33 @@ public class Card {
         // TODO: this is your job (Blackjack, p. 95).
 //        suit.ignore
 ////         card.flip
-//        if (faceUp){
-//            if (suit.equalsIgnoreCase("k")||suit.equalsIgnoreCase("k")) {
-//                return 10;
-//            }
-//            if (faceUp){
-//                return Integer.parseInt(value);
-//            }
-//        }else {
-//            return 0;
-//        }
+        if (faceUp){
+            if (suit.equalsIgnoreCase("k")||suit.equalsIgnoreCase("q")||suit.equalsIgnoreCase("j")) {
+                return 10;
+            }
+            if(suit.equalsIgnoreCase("Ace")){
+                return 11;
+            }
+            if (faceUp){
+                return Integer.parseInt(value);
+            }
+        }else {
+            return 0;
+        }
 //         check suit
 //         check value
 //         card.flip
+
         switch (suit.toLowerCase()) {
-            case "north" -> {
+            case "k", "q","j" -> {
                 // Do some logic here if needed
-                return 1;
+                return 10;
             }
-            case "south" -> {
-                return 2;
+            case "Ace" -> {
+                return 11;
             }
             default -> {
-                return 10; // This works because the method returns an int
+                return 0; // This works because the method returns an int
             }
         }
         // Until you finish it, every card is worth 0.
