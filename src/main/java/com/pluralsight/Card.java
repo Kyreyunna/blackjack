@@ -13,6 +13,10 @@ public class Card {
         this.faceUp = false;
     }
 
+    public Card() {
+
+    }
+
     public String getSuit() {
         // only return the suit if the card is face up
         if (faceUp) {
@@ -37,32 +41,27 @@ public class Card {
         // TODO: this is your job (Blackjack, p. 95).
 //        suit.ignore
 ////         card.flip
+        if (!faceUp) {
+            return 0;
+        }
 
         if (faceUp) {
-            if (value.equalsIgnoreCase("K") || value.equalsIgnoreCase("K") || value.equalsIgnoreCase("J")) {
+            if (value.equalsIgnoreCase("K") || value.equalsIgnoreCase("Q") || value.equalsIgnoreCase("J")) {
                 return 10;
             }
             if (value.equalsIgnoreCase("A")) {
                 return 11;
             }
             //this is what I think is looking at numeric cards and returning its value as an integer
+
             if (faceUp) {
                 return Integer.parseInt(value);
             }
+
         } else {
             return 0;
         }
-//         check suit
-//         check value
-//         card.flip
         // Until you finish it, every card is worth 0.
-//        return 0;
-
-        //flip card again so it's face down once the point value is returned so that it can be given back to the deck?
-//        if (!faceUp) {
-//            return 0;
-//        }
-//        faceUp = !faceUp;
         return 0;
     }
 
