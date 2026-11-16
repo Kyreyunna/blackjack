@@ -3,7 +3,7 @@ package com.pluralsight;
 public class Program {
     public static void main(String[] args) {
         Deck deck1 = new Deck();
-        System.out.println(deck1.getSize());
+        System.out.println("Cards currently in the deck: "+deck1.getSize());
 
 
         //shuffle here?
@@ -68,7 +68,7 @@ public class Program {
             System.out.println("Card 4's value is: "+card4.getPointValue());
 
             //I want to check size of deck after dealing two cards to each hand
-            System.out.println(deck2.getSize());
+            System.out.println("Cards currently in the deck: "+deck2.getSize());
         }
     }
 
